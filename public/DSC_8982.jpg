@@ -1,0 +1,300 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Background Dark Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05030a" />
+      <stop offset="35%" stop-color="#0a0518" />
+      <stop offset="65%" stop-color="#080310" />
+      <stop offset="100%" stop-color="#030206" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonGlowBlue" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="15" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonGlowPurple" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="neonGlowRed" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="blur1" />
+      <feGaussianBlur stdDeviation="18" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Eye Iris Radial Gradient -->
+    <radialGradient id="irisGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="25%" stop-color="#00f5ff" />
+      <stop offset="65%" stop-color="#0066ff" />
+      <stop offset="90%" stop-color="#0a1a3a" />
+      <stop offset="100%" stop-color="#040915" />
+    </radialGradient>
+
+    <!-- Floor Reflection Gradient -->
+    <linearGradient id="floorReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0515" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#120626" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#030206" />
+    </linearGradient>
+
+    <!-- Red streak gradient on right wall -->
+    <linearGradient id="redStreakGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff0055" stop-opacity="0.95" />
+      <stop offset="40%" stop-color="#ff1a3c" stop-opacity="0.8" />
+      <stop offset="80%" stop-color="#ff4d00" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="cyanStreakGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#0088ff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Black Architecture Background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+
+  <!-- TUNNEL PERSPECTIVE GUIDES -->
+  <!-- Ceiling Polygon (perspective dark ceiling) -->
+  <polygon points="0,0 1920,0 1420,520 1190,520 0,260" fill="#04020a" />
+
+  <!-- Right Wall in Perspective -->
+  <polygon points="1920,0 1920,1080 1420,620 1420,520" fill="#06020c" />
+
+  <!-- Back Door / Corridor End Gateway -->
+  <rect x="1190" y="510" width="230" height="115" fill="#050814" stroke="#00f0ff" stroke-width="1.5" opacity="0.6" />
+  <rect x="1230" y="525" width="40" height="85" fill="#0b1b36" opacity="0.8" />
+  <rect x="1285" y="525" width="45" height="85" fill="#0f2a4f" opacity="0.8" />
+  <circle cx="1370" cy="545" r="8" fill="#ffffff" filter="url(#neonGlowBlue)" opacity="0.9" />
+  <rect x="1355" y="565" width="30" height="4" fill="#00f0ff" opacity="0.8" />
+  <rect x="1355" y="575" width="22" height="3" fill="#ff5419" opacity="0.8" />
+  <rect x="1355" y="584" width="35" height="3" fill="#a855f7" opacity="0.8" />
+
+  <!-- CEILING ANGULAR NEON STRIP LIGHTS (Electric Violet, Purple & Cyan) -->
+  <g filter="url(#neonGlowPurple)" stroke="#b537ff" stroke-width="7" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Channel 1: Leftmost ceiling neon line -->
+    <polyline points="380,0 440,110 520,110 590,260 690,260 760,400 810,400 860,500 1205,520" />
+    <!-- Channel 2: Center-left ceiling neon line -->
+    <polyline points="720,0 760,90 820,90 880,240 940,240 1000,380 1040,380 1090,480 1235,520" />
+    <!-- Channel 3: Center-right ceiling neon line -->
+    <polyline points="1080,0 1100,70 1150,70 1190,210 1230,210 1270,360 1290,360 1330,470 1275,520" />
+  </g>
+
+  <!-- Core Bright White Highlights inside the neon ceiling tubes -->
+  <g stroke="#ffffff" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round" opacity="0.95">
+    <polyline points="380,0 440,110 520,110 590,260 690,260 760,400 810,400 860,500 1205,520" />
+    <polyline points="720,0 760,90 820,90 880,240 940,240 1000,380 1040,380 1090,480 1235,520" />
+    <polyline points="1080,0 1100,70 1150,70 1190,210 1230,210 1270,360 1290,360 1330,470 1275,520" />
+  </g>
+
+  <!-- Additional Cyan Ceiling Accent Neon -->
+  <g filter="url(#neonGlowBlue)" stroke="#00e5ff" stroke-width="5" fill="none" opacity="0.85">
+    <polyline points="1320,0 1335,60 1365,60 1390,200 1410,340 1425,480 1315,520" />
+  </g>
+  <polyline points="1320,0 1335,60 1365,60 1390,200 1410,340 1425,480 1315,520" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.9" />
+
+  <!-- LEFT WALL: THE MASSIVE HOLOGRAPHIC CYBERNETIC EYE EXHIBITION -->
+  <g id="cyberneticEyeGroup">
+    <!-- Ambient cyan and blue glow radiating from the eye wall -->
+    <ellipse cx="610" cy="410" rx="420" ry="260" fill="#003cd2" opacity="0.22" filter="url(#neonGlowBlue)" />
+    <ellipse cx="610" cy="410" rx="280" ry="170" fill="#00f0ff" opacity="0.2" filter="url(#neonGlowBlue)" />
+
+    <!-- Sclera & Outer Eye Ellipse Contour -->
+    <path d="M 120,440 Q 610,120 1050,420 Q 610,700 120,440 Z" fill="#040b1e" stroke="#00e5ff" stroke-width="2.5" opacity="0.7" />
+
+    <!-- Complex Polygonal Wireframe Mesh on the Eyelid & Surrounding Sclera (Triangles & Nodes) -->
+    <g stroke="#00e5ff" stroke-width="1" fill="none" opacity="0.55">
+      <!-- Upper brow constellation -->
+      <polygon points="120,440 260,320 380,260" />
+      <polygon points="260,320 380,260 480,210 390,320" />
+      <polygon points="480,210 610,180 540,290 390,320" />
+      <polygon points="610,180 740,200 680,290 540,290" />
+      <polygon points="740,200 870,240 800,320 680,290" />
+      <polygon points="870,240 980,310 880,360 800,320" />
+      <polygon points="980,310 1050,420 940,410 880,360" />
+
+      <!-- Lower socket constellation -->
+      <polygon points="120,440 280,510 410,560" />
+      <polygon points="280,510 410,480 410,560" />
+      <polygon points="410,560 560,600 520,510 410,480" />
+      <polygon points="560,600 700,590 660,500 520,510" />
+      <polygon points="700,590 840,550 780,480 660,500" />
+      <polygon points="840,550 960,490 880,440 780,480" />
+      <polygon points="960,490 1050,420 880,440" />
+
+      <!-- Internal wireframe webs connecting to Iris -->
+      <line x1="260" y1="320" x2="450" y2="390" />
+      <line x1="390" y1="320" x2="490" y2="340" />
+      <line x1="540" y1="290" x2="570" y2="320" />
+      <line x1="680" y1="290" x2="660" y2="320" />
+      <line x1="800" y1="320" x2="730" y2="350" />
+      <line x1="410" y1="480" x2="470" y2="440" />
+      <line x1="520" y1="510" x2="560" y2="480" />
+      <line x1="660" y1="500" x2="660" y2="480" />
+      <line x1="780" y1="480" x2="740" y2="440" />
+    </g>
+
+    <!-- Glowing Nodes on vertices -->
+    <g fill="#ffffff" filter="url(#neonGlowBlue)">
+      <circle cx="260" cy="320" r="3.5" />
+      <circle cx="380" cy="260" r="4" />
+      <circle cx="480" cy="210" r="3" />
+      <circle cx="610" cy="180" r="4.5" />
+      <circle cx="740" cy="200" r="3.5" />
+      <circle cx="870" cy="240" r="4" />
+      <circle cx="980" cy="310" r="3" />
+      <circle cx="390" cy="320" r="3" />
+      <circle cx="540" cy="290" r="3.5" />
+      <circle cx="680" cy="290" r="3.5" />
+      <circle cx="800" cy="320" r="3" />
+      <circle cx="280" cy="510" r="3.5" />
+      <circle cx="410" cy="560" r="4" />
+      <circle cx="560" cy="600" r="4" />
+      <circle cx="700" cy="590" r="4" />
+      <circle cx="840" cy="550" r="3.5" />
+      <circle cx="960" cy="490" r="3" />
+    </g>
+
+    <!-- Large Circular Iris Structure -->
+    <circle cx="615" cy="405" r="160" fill="url(#irisGlow)" stroke="#00f0ff" stroke-width="3" filter="url(#neonGlowBlue)" />
+    
+    <!-- Concentric HUD Tech Arcs and Circles in Iris -->
+    <circle cx="615" cy="405" r="175" stroke="#00f0ff" stroke-width="1.8" stroke-dasharray="8 6 18 6" fill="none" opacity="0.85" />
+    <circle cx="615" cy="405" r="140" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="3 4" fill="none" opacity="0.9" />
+    <circle cx="615" cy="405" r="115" stroke="#00d2ff" stroke-width="2" stroke-dasharray="40 10 15 10" fill="none" opacity="0.85" />
+    <circle cx="615" cy="405" r="85" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="5 3" fill="none" opacity="0.95" />
+
+    <!-- Core Pupil / Dark Center with Glowing Blue Aura -->
+    <circle cx="615" cy="405" r="70" fill="#04091a" stroke="#00f0ff" stroke-width="2" />
+    
+    <!-- Inner Circular Badge: "COMITÊ REGIONAL DE INOVAÇÃO DO CEARÁ" -->
+    <g transform="translate(615, 405)" text-anchor="middle">
+      <circle cx="0" cy="0" r="45" fill="#001838" stroke="#ffffff" stroke-width="1" opacity="0.9" />
+      <text y="-14" fill="#00f5ff" font-family="'Segoe UI', 'Roboto', 'Arial', sans-serif" font-size="7.5" font-weight="900" letter-spacing="1.2">COMITÊ REGIONAL</text>
+      <text y="-2" fill="#ffffff" font-family="'Segoe UI', 'Roboto', 'Arial', sans-serif" font-size="7.5" font-weight="900" letter-spacing="1.5">DE INOVAÇÃO</text>
+      <text y="10" fill="#ffaa44" font-family="'Segoe UI', 'Roboto', 'Arial', sans-serif" font-size="7.5" font-weight="900" letter-spacing="2">DO CEARÁ</text>
+      <circle cx="0" cy="22" r="3" fill="#00f5ff" />
+    </g>
+
+    <!-- Outer Eyelash Technological Sensor Array Radiating Outward -->
+    <g stroke="#00f0ff" stroke-width="1.8" opacity="0.8" stroke-linecap="round">
+      <line x1="380" y1="260" x2="350" y2="200" />
+      <line x1="480" y1="210" x2="470" y2="140" />
+      <line x1="610" y1="180" x2="610" y2="105" />
+      <line x1="740" y1="200" x2="760" y2="135" />
+      <line x1="870" y1="240" x2="910" y2="185" />
+      <line x1="980" y1="310" x2="1040" y2="265" />
+      
+      <!-- Sensor heads -->
+      <circle cx="350" cy="200" r="3" fill="#00f0ff" />
+      <circle cx="470" cy="140" r="3.5" fill="#ffffff" />
+      <circle cx="610" cy="105" r="4" fill="#00f0ff" />
+      <circle cx="760" cy="135" r="3.5" fill="#ffffff" />
+      <circle cx="910" cy="185" r="3" fill="#00f0ff" />
+      <circle cx="1040" cy="265" r="3" fill="#00f0ff" />
+    </g>
+
+    <!-- Dynamic Glowing Laser Diamond / Star to the right of the eye -->
+    <g transform="translate(1030, 485)" filter="url(#neonGlowBlue)">
+      <!-- 4-pointed radiant star -->
+      <path d="M 0,-48 Q 0,0 48,0 Q 0,0 0,48 Q 0,0 -48,0 Q 0,0 0,-48 Z" fill="#ffffff" stroke="#00f5ff" stroke-width="2" />
+      <!-- Horizontal laser guide line -->
+      <line x1="-120" y1="0" x2="180" y2="0" stroke="#00e5ff" stroke-width="1.5" opacity="0.75" stroke-dasharray="10 5" />
+      <line x1="0" y1="-70" x2="0" y2="70" stroke="#00e5ff" stroke-width="1.5" opacity="0.5" stroke-dasharray="6 4" />
+      <circle cx="0" cy="0" r="8" fill="#ffffff" />
+      <!-- Small tech coordinate text -->
+      <text x="60" y="-8" fill="#00f0ff" font-family="monospace" font-size="12" font-weight="bold">0 53</text>
+    </g>
+
+    <!-- Additional Secondary Eye Graphic further down the wall (Perspective depth) -->
+    <g transform="translate(1140, 500) scale(0.38)" opacity="0.7" filter="url(#neonGlowBlue)">
+      <ellipse cx="0" cy="0" rx="190" ry="110" fill="#051433" stroke="#00e5ff" stroke-width="2" />
+      <circle cx="0" cy="0" r="70" fill="url(#irisGlow)" />
+      <circle cx="0" cy="0" r="30" fill="#000e26" stroke="#ffffff" stroke-width="1.5" />
+    </g>
+
+    <!-- Intense Crimson Red Laser Strip running along bottom of left wall into foreground -->
+    <g filter="url(#neonGlowRed)">
+      <path d="M 0,690 Q 380,660 780,610 L 1190,565" stroke="#ff003c" stroke-width="14" fill="none" stroke-linecap="round" />
+      <path d="M 0,690 Q 380,660 780,610 L 1190,565" stroke="#ff4400" stroke-width="6" fill="none" stroke-linecap="round" />
+      <path d="M 0,690 Q 380,660 780,610 L 1190,565" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.9" />
+    </g>
+  </g>
+
+  <!-- RIGHT WALL: DYNAMIC RED & MAGENTA LIGHT SPEED TRAILS -->
+  <g id="rightWallSpeedStreaks" filter="url(#neonGlowRed)">
+    <!-- Motion streak 1 -->
+    <polygon points="1920,240 1620,440 1590,470 1920,330" fill="url(#redStreakGrad)" />
+    <!-- Motion streak 2 (Lower bright red beam) -->
+    <polygon points="1920,620 1550,560 1530,580 1920,780" fill="url(#redStreakGrad)" />
+    <!-- Center intense laser streak -->
+    <line x1="1920" y1="410" x2="1520" y2="520" stroke="#ff0055" stroke-width="12" stroke-linecap="round" />
+    <line x1="1920" y1="410" x2="1520" y2="520" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    
+    <!-- Fine magenta speed lines -->
+    <line x1="1920" y1="360" x2="1640" y2="480" stroke="#e11d48" stroke-width="4" opacity="0.85" />
+    <line x1="1920" y1="520" x2="1580" y2="540" stroke="#fb7185" stroke-width="3" opacity="0.75" />
+    <line x1="1920" y1="710" x2="1610" y2="580" stroke="#ff0044" stroke-width="6" opacity="0.9" />
+  </g>
+
+  <!-- HIGH-GLOSS REFLECTIVE FLOOR -->
+  <!-- Floor base polygon -->
+  <polygon points="0,690 1190,565 1420,620 1920,1080 0,1080" fill="url(#floorReflection)" />
+
+  <!-- Glossy Floor Specular & Light Pools (Mirroring Ceiling and Wall Art) -->
+  <g opacity="0.75" style="mix-blend-mode: screen;">
+    <!-- Reflection of giant blue eye -->
+    <ellipse cx="680" cy="820" rx="360" ry="160" fill="#0038b8" opacity="0.35" filter="url(#neonGlowBlue)" />
+    <ellipse cx="650" cy="840" rx="220" ry="90" fill="#00d2ff" opacity="0.3" filter="url(#neonGlowBlue)" />
+    <ellipse cx="630" cy="850" rx="110" ry="40" fill="#ffffff" opacity="0.25" filter="url(#neonGlowBlue)" />
+
+    <!-- Floor mirror streaks of purple ceiling lights -->
+    <path d="M 520,720 Q 640,890 710,1080" stroke="#9333ea" stroke-width="18" fill="none" opacity="0.4" filter="url(#neonGlowPurple)" />
+    <path d="M 820,680 Q 940,860 1020,1080" stroke="#c084fc" stroke-width="14" fill="none" opacity="0.45" filter="url(#neonGlowPurple)" />
+    <path d="M 1120,640 Q 1190,820 1250,1080" stroke="#a855f7" stroke-width="10" fill="none" opacity="0.35" filter="url(#neonGlowPurple)" />
+
+    <!-- Floor mirror streak of cyan right ceiling line -->
+    <path d="M 1260,630 Q 1310,790 1360,1080" stroke="#00e5ff" stroke-width="8" fill="none" opacity="0.4" filter="url(#neonGlowBlue)" />
+
+    <!-- Floor mirror streak of crimson bottom trail -->
+    <path d="M 180,740 Q 320,860 480,1080" stroke="#ff0044" stroke-width="22" fill="none" opacity="0.5" filter="url(#neonGlowRed)" />
+    <path d="M 180,740 Q 320,860 480,1080" stroke="#ff5500" stroke-width="8" fill="none" opacity="0.6" filter="url(#neonGlowRed)" />
+
+    <!-- Glossy wet tile texture lines on the reflective floor -->
+    <g stroke="#ffffff" stroke-width="0.75" opacity="0.12">
+      <line x1="0" y1="780" x2="1920" y2="780" />
+      <line x1="0" y1="870" x2="1920" y2="870" />
+      <line x1="0" y1="970" x2="1920" y2="970" />
+      <line x1="420" y1="670" x2="180" y2="1080" />
+      <line x1="720" y1="630" x2="620" y2="1080" />
+      <line x1="1020" y1="600" x2="1080" y2="1080" />
+      <line x1="1260" y1="580" x2="1480" y2="1080" />
+    </g>
+  </g>
+
+  <!-- Subtle vignette gradient around whole banner -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="transparent" stop-opacity="0" />
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.8" />
+  </radialGradient>
+  <rect width="1920" height="1080" fill="url(#vignette)" pointer-events="none" />
+</svg>

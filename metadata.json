@@ -1,0 +1,6 @@
+{
+  "name": "Focus Academy - Aprenda Tecnologia Construindo em Squad",
+  "description": "Uma comunidade para transformar conhecimento em prática: encontre projetos, colabore com pessoas de diferentes áreas e desenvolva soluções com um fluxo próximo ao mercado.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

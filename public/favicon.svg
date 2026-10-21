@@ -1,0 +1,26 @@
+<svg width="64" height="64" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="24" fill="#0c0c0e"/>
+  <defs>
+    <radialGradient id="favGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="#ff5419" stopOpacity="0.5"/>
+      <stop offset="100%" stopColor="#ff3d00" stopOpacity="0"/>
+    </radialGradient>
+    <linearGradient id="favBlade" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stopColor="#fff275"/>
+      <stop offset="25%" stopColor="#ffb300"/>
+      <stop offset="65%" stopColor="#ff5419"/>
+      <stop offset="100%" stopColor="#d12e00"/>
+    </linearGradient>
+    <g id="favBladeDef">
+      <path d="M 60 14 C 74 14, 86 18, 96 27 C 90 32, 81 34, 72 33 C 57 32, 47 39, 43 51 C 41.5 54.5, 42 58, 43.5 61 C 40 58, 38 53, 37.5 48 C 36.5 38, 44 26, 56 17 C 57.5 15.5, 58.8 14.8, 60 14 Z" fill="url(#favBlade)"/>
+      <path d="M 62 17 C 73 18, 83 22, 91 29 C 83 32, 75 33, 67 32 C 54 31, 46 38, 43.5 49" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.85"/>
+    </g>
+  </defs>
+  <circle cx="60" cy="60" r="50" fill="url(#favGlow)"/>
+  <use href="#favBladeDef"/>
+  <use href="#favBladeDef" transform="rotate(90 60 60)"/>
+  <use href="#favBladeDef" transform="rotate(180 60 60)"/>
+  <use href="#favBladeDef" transform="rotate(270 60 60)"/>
+  <circle cx="60" cy="60" r="6" fill="#ff5419"/>
+  <circle cx="60" cy="60" r="2.5" fill="#ffe57f"/>
+</svg>

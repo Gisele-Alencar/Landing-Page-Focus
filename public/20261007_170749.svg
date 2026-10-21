@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Background Exhibition Hall Gradient -->
+    <linearGradient id="hallBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#241a2f" />
+      <stop offset="35%" stop-color="#3b2345" />
+      <stop offset="70%" stop-color="#1b1224" />
+      <stop offset="100%" stop-color="#0e0814" />
+    </linearGradient>
+
+    <!-- Magenta Booth Glow -->
+    <filter id="boothNeon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur1" />
+      <feGaussianBlur stdDeviation="18" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <linearGradient id="boothPinkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="50%" stop-color="#e02484" />
+      <stop offset="100%" stop-color="#a81a70" />
+    </linearGradient>
+
+    <linearGradient id="wallRightGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b82161" />
+      <stop offset="50%" stop-color="#732563" />
+      <stop offset="100%" stop-color="#40144f" />
+    </linearGradient>
+
+    <!-- Ceiling Spotlights Glow -->
+    <radialGradient id="spotlight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="30%" stop-color="#fff5ea" stop-opacity="0.5" />
+      <stop offset="70%" stop-color="#e0d0f5" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Hall Background -->
+  <rect width="1920" height="1080" fill="url(#hallBg)" />
+
+  <!-- CEILING STRUCTURE & SPOTLIGHT GRID (Perspective of huge summit hall) -->
+  <g opacity="0.45" stroke="#4d3257" stroke-width="1.5">
+    <line x1="0" y1="60" x2="1920" y2="60" />
+    <line x1="0" y1="130" x2="1920" y2="130" />
+    <line x1="0" y1="210" x2="1920" y2="210" />
+    <line x1="200" y1="0" x2="350" y2="280" />
+    <line x1="450" y1="0" x2="580" y2="280" />
+    <line x1="700" y1="0" x2="800" y2="280" />
+    <line x1="950" y1="0" x2="1010" y2="280" />
+    <line x1="1200" y1="0" x2="1230" y2="280" />
+    <line x1="1450" y1="0" x2="1440" y2="280" />
+    <line x1="1700" y1="0" x2="1650" y2="280" />
+  </g>
+
+  <!-- Array of round ceiling floodlights -->
+  <g>
+    <!-- Row 1 -->
+    <circle cx="160" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="360" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="560" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="760" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="960" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="1160" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="1360" cy="50" r="14" fill="url(#spotlight)" />
+    <circle cx="1560" cy="50" r="14" fill="url(#spotlight)" />
+    <!-- Row 2 -->
+    <circle cx="240" cy="120" r="16" fill="url(#spotlight)" />
+    <circle cx="460" cy="120" r="16" fill="url(#spotlight)" />
+    <circle cx="680" cy="120" r="16" fill="url(#spotlight)" />
+    <circle cx="900" cy="120" r="16" fill="url(#spotlight)" />
+    <circle cx="1120" cy="120" r="16" fill="url(#spotlight)" />
+    <circle cx="1340" cy="120" r="16" fill="url(#spotlight)" />
+    <circle cx="1560" cy="120" r="16" fill="url(#spotlight)" />
+    <!-- Row 3 -->
+    <circle cx="320" cy="190" r="18" fill="url(#spotlight)" />
+    <circle cx="580" cy="190" r="18" fill="url(#spotlight)" />
+    <circle cx="840" cy="190" r="18" fill="url(#spotlight)" />
+    <circle cx="1100" cy="190" r="18" fill="url(#spotlight)" />
+    <circle cx="1360" cy="190" r="18" fill="url(#spotlight)" />
+  </g>
+
+  <!-- BOOTH WALLS & PINK/MAGENTA ILLUMINATED STRUCTURES (Left & Center) -->
+  <!-- Back booth row in perspective -->
+  <polygon points="0,260 980,340 980,680 0,720" fill="#2d143b" />
+  
+  <!-- Leftmost Glowing Pink Booth Column -->
+  <rect x="0" y="240" width="40" height="520" fill="#ff007f" filter="url(#boothNeon)" opacity="0.9" />
+  
+  <!-- Booth Panel 1 (Left White/Pink Header "EMPRESA...") -->
+  <g transform="translate(60, 260)">
+    <!-- Header panel -->
+    <rect x="0" y="0" width="240" height="85" rx="8" fill="#f8e7f2" stroke="#ff007f" stroke-width="4" filter="url(#boothNeon)" opacity="0.9" />
+    <text x="30" y="52" fill="#521d42" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22" letter-spacing="2">EMPRESA</text>
+    <!-- Back wall of booth -->
+    <rect x="0" y="95" width="240" height="340" fill="#a4185c" opacity="0.8" />
+    <!-- Vertical neon dividing light pillar -->
+    <rect x="235" y="-10" width="16" height="460" fill="#ff007f" filter="url(#boothNeon)" />
+  </g>
+
+  <!-- Booth Panel 2 (Center-Left) -->
+  <g transform="translate(320, 290)">
+    <rect x="0" y="0" width="220" height="75" rx="6" fill="#fceaf4" stroke="#ff007f" stroke-width="3" filter="url(#boothNeon)" opacity="0.85" />
+    <rect x="15" y="25" width="80" height="12" fill="#931e5c" opacity="0.7" />
+    <rect x="15" y="44" width="140" height="8" fill="#b82d75" opacity="0.5" />
+    <rect x="0" y="85" width="220" height="310" fill="#8f1954" opacity="0.75" />
+    <rect x="215" y="-10" width="16" height="420" fill="#ff007f" filter="url(#boothNeon)" />
+  </g>
+
+  <!-- Booth Panel 3 (Center) -->
+  <g transform="translate(560, 320)">
+    <rect x="0" y="0" width="180" height="65" rx="5" fill="#f7e1ee" stroke="#ff007f" stroke-width="3" filter="url(#boothNeon)" opacity="0.8" />
+    <rect x="0" y="75" width="180" height="280" fill="#781747" opacity="0.7" />
+    <rect x="175" y="-10" width="14" height="380" fill="#ff007f" filter="url(#boothNeon)" />
+  </g>
+
+  <!-- Further Booths receding into perspective -->
+  <g transform="translate(760, 340)" opacity="0.7">
+    <rect x="0" y="0" width="120" height="50" rx="4" fill="#eed5e5" stroke="#ff007f" stroke-width="2" />
+    <rect x="0" y="55" width="120" height="240" fill="#62143b" />
+    <rect x="115" y="-5" width="10" height="310" fill="#ff007f" filter="url(#boothNeon)" />
+  </g>
+
+  <!-- RIGHT WALL: TALL "CEARÁ TECH SUMMIT" BANNER (Signature feature of photo) -->
+  <g id="cearaTechSummitBanner" transform="translate(1420, 0)">
+    <!-- Tall Magenta/Violet Wall Panel in Perspective -->
+    <polygon points="0,0 500,0 500,1080 0,1080" fill="url(#wallRightGrad)" />
+    
+    <!-- White Signage Board on the Wall -->
+    <rect x="40" y="80" width="380" height="420" rx="14" fill="#ffffff" opacity="0.96" filter="url(#boothNeon)" />
+    
+    <!-- Blue Logo Box inside Summit Board -->
+    <rect x="70" y="110" width="120" height="120" rx="12" fill="#0b57d0" />
+    <!-- Stylized 'C' and tech node logo -->
+    <circle cx="130" cy="170" r="34" stroke="#ffffff" stroke-width="8" fill="none" stroke-dasharray="160 40" />
+    <circle cx="130" cy="170" r="14" fill="#ff007f" />
+    
+    <!-- Summit Typography -->
+    <text x="210" y="145" fill="#1e1e24" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" letter-spacing="1">CEARÁ</text>
+    <text x="210" y="180" fill="#0b57d0" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" letter-spacing="2">TECH</text>
+    <text x="210" y="215" fill="#ff007f" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22" letter-spacing="3">SUMMIT</text>
+    
+    <!-- Focus Academy Sub-branding on Summit Banner -->
+    <rect x="70" y="260" width="320" height="3" fill="#e0e0e0" />
+    <text x="70" y="300" fill="#333333" font-family="'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18">FOCUS ACADEMY</text>
+    <text x="70" y="325" fill="#666666" font-family="'Segoe UI', Roboto, sans-serif" font-size="14">Inovação, Squads &amp; Comunidade</text>
+    <rect x="70" y="350" width="140" height="26" rx="4" fill="#ff5419" />
+    <text x="140" y="368" fill="#ffffff" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="11" text-anchor="middle">ESTANDE OFICIAL</text>
+  </g>
+
+  <!-- FOREGROUND & MIDGROUND SILHOUETTES / ATTENDEES (The core human interaction in the photo) -->
+  <!-- Floor base in foreground -->
+  <polygon points="0,700 1420,700 1420,1080 0,1080" fill="#130a1c" />
+
+  <!-- White Table / Counter on Left -->
+  <polygon points="0,710 320,680 320,1080 0,1080" fill="#ffffff" opacity="0.9" stroke="#ff007f" stroke-width="2" />
+  <rect x="180" y="650" width="55" height="40" rx="15" fill="#00d2ff" opacity="0.75" />
+  <rect x="60" y="670" width="40" height="25" rx="3" fill="#ffaa44" opacity="0.8" />
+
+  <!-- Person 1 (Left Woman with dark hair, black top and striped pants, listening) -->
+  <g id="personWomanLeft" transform="translate(190, 310)">
+    <!-- Hair -->
+    <path d="M 40,70 Q 20,140 10,240 Q 60,260 90,240 Q 80,140 60,70 Z" fill="#18121a" />
+    <!-- Head silhouette -->
+    <ellipse cx="50" cy="80" rx="30" ry="38" fill="#301f2d" />
+    <!-- Black Top / Torso -->
+    <path d="M 15,140 L 85,140 L 95,290 L 5,290 Z" fill="#120c17" />
+    <!-- Striped Pants (Black and White vertical stripes) -->
+    <g transform="translate(5, 290)">
+      <path d="M 0,0 L 90,0 L 105,480 L -15,480 Z" fill="#120c17" />
+      <!-- Vertical white pinstripes -->
+      <line x1="15" y1="0" x2="5" y2="480" stroke="#ffffff" stroke-width="3.5" opacity="0.9" />
+      <line x1="30" y1="0" x2="25" y2="480" stroke="#ffffff" stroke-width="3.5" opacity="0.9" />
+      <line x1="45" y1="0" x2="45" y2="480" stroke="#ffffff" stroke-width="3.5" opacity="0.9" />
+      <line x1="60" y1="0" x2="65" y2="480" stroke="#ffffff" stroke-width="3.5" opacity="0.9" />
+      <line x1="75" y1="0" x2="85" y2="480" stroke="#ffffff" stroke-width="3.5" opacity="0.9" />
+    </g>
+  </g>
+
+  <!-- Person 2 (Center-Left Speaker: Bearded man with white t-shirt & event lanyard, speaking actively) -->
+  <g id="speakerMan" transform="translate(480, 320)">
+    <!-- Head & Beard -->
+    <ellipse cx="70" cy="50" rx="32" ry="38" fill="#f0c2a8" />
+    <path d="M 40,25 Q 70,10 100,25 Q 95,50 90,65 Q 70,85 50,65 Z" fill="#2d1c1c" />
+    <!-- Beard -->
+    <path d="M 45,55 Q 70,95 95,55 Q 95,78 70,92 Q 45,78 45,55 Z" fill="#241515" />
+    <!-- White T-shirt Torso -->
+    <path d="M 10,105 Q 70,90 130,105 L 145,290 L -5,290 Z" fill="#f4f0f6" stroke="#d5c8dc" stroke-width="1.5" />
+    <!-- Event Lanyard / Badge -->
+    <path d="M 52,100 L 68,170 L 78,170 L 88,100" stroke="#3b82f6" stroke-width="5" fill="none" />
+    <rect x="62" y="170" width="22" height="30" rx="2" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+    <rect x="66" y="178" width="14" height="4" fill="#ff5419" />
+    <!-- Animated speaking arm -->
+    <path d="M 125,125 Q 165,160 180,185 Q 165,195 140,165" fill="#f0c2a8" />
+    <!-- Pants -->
+    <path d="M -5,290 L 145,290 L 135,520 L 5,520 Z" fill="#383038" />
+  </g>
+
+  <!-- Person 3 (Center Background Attendee in black shirt) -->
+  <g id="personMidground" transform="translate(710, 355)" opacity="0.85">
+    <ellipse cx="40" cy="40" rx="22" ry="26" fill="#f0baa0" />
+    <path d="M 20,25 Q 40,15 60,25 Q 58,45 55,55 Q 40,65 25,55 Z" fill="#1b151b" />
+    <path d="M 5,80 L 75,80 L 85,240 L -5,240 Z" fill="#1a141e" />
+    <path d="M -5,240 L 85,240 L 75,440 L 5,440 Z" fill="#bfaba0" />
+  </g>
+
+  <!-- Person 4 (Foreground Main Attendee from back: Tan/Beige polo shirt) -->
+  <g id="personBeigePoloForeground" transform="translate(770, 160)">
+    <!-- Head from behind with dark curly hair -->
+    <ellipse cx="140" cy="110" rx="55" ry="65" fill="#24171e" />
+    <!-- Neck -->
+    <rect x="110" y="160" width="60" height="45" fill="#d4a387" />
+    <!-- Beige / Sand Polo Shirt (Broad shoulders dominating foreground) -->
+    <path d="M 10,205 Q 140,185 270,205 L 295,780 L -15,780 Z" fill="#cfb69e" stroke="#b49980" stroke-width="2" />
+    <!-- Polo collar crease and fold lines -->
+    <path d="M 100,205 L 140,255 L 180,205" stroke="#a08269" stroke-width="4" fill="none" />
+    <path d="M 70,340 Q 140,370 210,340" stroke="#ba9d84" stroke-width="3" fill="none" opacity="0.6" />
+    <!-- Folded arm silhouette -->
+    <path d="M 0,380 Q 80,480 200,450" stroke="#b0957b" stroke-width="12" fill="none" opacity="0.4" />
+  </g>
+
+  <!-- Person 5 (Foreground Right Attendee: Striped shirt & backpack with badge) -->
+  <g id="personBackpackForeground" transform="translate(1070, 230)">
+    <ellipse cx="90" cy="110" rx="42" ry="50" fill="#281b22" />
+    <!-- Torso with dark grey / subtle striped pattern -->
+    <path d="M 20,180 Q 90,165 170,180 L 190,700 L 0,700 Z" fill="#58525b" />
+    <!-- Backpack -->
+    <ellipse cx="160" cy="380" rx="65" ry="110" fill="#1e1822" stroke="#120c16" stroke-width="3" />
+    <rect x="110" y="240" width="22" height="180" rx="6" fill="#18121c" />
+    <!-- White mascot charm hanging from backpack (as in photo) -->
+    <circle cx="215" cy="360" r="14" fill="#ffffff" filter="url(#boothNeon)" />
+    <!-- Blue Summit lanyard on neck -->
+    <path d="M 65,175 Q 85,210 105,175" stroke="#3b82f6" stroke-width="6" fill="none" />
+  </g>
+
+  <!-- Atmospheric Summit Hall Lighting & Dust Bokeh -->
+  <g opacity="0.5" style="mix-blend-mode: screen;">
+    <ellipse cx="580" cy="500" rx="420" ry="320" fill="#ff007f" opacity="0.16" filter="url(#boothNeon)" />
+    <ellipse cx="1200" cy="450" rx="380" ry="280" fill="#9333ea" opacity="0.14" filter="url(#boothNeon)" />
+    <ellipse cx="1500" cy="300" rx="260" ry="200" fill="#e02484" opacity="0.22" filter="url(#boothNeon)" />
+  </g>
+
+  <!-- Subtle Vignette Frame -->
+  <radialGradient id="summitVignette" cx="50%" cy="50%" r="70%">
+    <stop offset="60%" stop-color="transparent" stop-opacity="0" />
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.75" />
+  </radialGradient>
+  <rect width="1920" height="1080" fill="url(#summitVignette)" pointer-events="none" />
+</svg>
